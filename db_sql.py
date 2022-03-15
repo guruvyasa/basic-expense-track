@@ -17,9 +17,10 @@ def addCategory(name):
 	try:
 		conn.execute(query,[name])
 		conn.commit()
-		print("Added Successfully")
+		return "Added Successfully"
 	except Exception as e:
 		print(e)
+		return "Could not add category"
 
 	finally:
 		conn.close()
